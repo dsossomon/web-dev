@@ -1,7 +1,9 @@
 body {
   margin: 0px;
-  color:red;
+  font-family: sans-serif;
+  color: red; /* This makes all regular text (p, h1, h2, li) red */
 }
+
 
 a {
   color: inherit;
@@ -34,12 +36,12 @@ h1 {
 }
 
 .nav-div a {
-  display: inline-block;
-  width: 100%;
-  padding: 10px 0px 15px;
+  display: block; 
+  padding: 15px 0;
   background-color: navy;
-  color: white; /* Added for visibility */
+  color: white; /* Keeps the link text white */
 }
+
 
 .nav-div ul {
   display: none;
@@ -69,4 +71,8 @@ h1 {
 .nav-div ul a:hover {
   background-color: white;
   color: navy;
+}
+ol a, ul a, body > a {
+  color: blue; 
+  text-decoration: underline;
 }
