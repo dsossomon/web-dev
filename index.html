@@ -1,112 +1,119 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Drew soccer player</title>
-    <!-- Removed the "/" before web-dev so it works correctly on GitHub -->
-  <link rel="stylesheet" href="styles.css">
-   </head>
-  <body>
-    <div id="preheader">
-      <h1>Drew Sossomon Website</h1>
-    </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drew Sossomon | Goalkeeper 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-<div id="nav-menu">
-  <div id="nav-home" class="nav-div">
-    <a href="#">Home</a>
-  </div>
-  
-  <div id="nav-aboutme" class="nav-div">
-    <a href="#">About Me</a>
-    <ul>   
-      <li><a href="#">About Me</a></li>
-    </ul>
-  </div>
-  
-  <div id="nav-videos" class="nav-div">
-    <a href="#">Videos</a>
-    <ul>   
-      <li><a href="#">Videos</a></li>
-    </ul>
-  </div>
-  
-  <div id="nav-photos" class="nav-div">
-    <a href="#">Photos</a>
-    <ul>
-      <li><a href="#">Photos Page 1</a></li>
-      <li><a href="#">Photos Page 2</a></li> 
-      <li><a href="#">Photos Page 3</a></li>            
-      <li><a href="#">Photos Page 4</a></li>
-    </ul>
-  </div>
+    <!-- Professional Navigation Bar -->
+    <nav id="nav-menu">
+        <div class="logo">DREW SOSSOMON</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            
+            <!-- Courses Dropdown -->
+            <li class="dropdown">
+                <a href="#">Courses ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">American History</a></li>
+                    <li><a href="#">Geometry</a></li> 
+                    <li><a href="#">Study Hall</a></li> 
+                    <li><a href="#">Earth Science</a></li> 
+                    <li><a href="#">Web-dev/Game theory</a></li>
+                    <li><a href="#">American Literature</a></li>
+                    <li><a href="#">Latin II</a></li>
+                </ul>
+            </li>
 
-<li id="nav-stat" class="nav-div">
-  <!-- This is the top-level button people see first -->
-  <a href="stats.html">Soccer Stats</a>
+            <!-- Stats Dropdown -->
+            <li class="dropdown">
+                <a href="stats.html">Stats ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="stats.html">Full Career Stats</a></li>
+                    <li><a href="#">Video Highlights</a></li>
+                </ul>
+            </li>
 
-  <!-- This is the hidden list that "drops down" -->
-  <ul class="dropdown-content">   
-    <li><a href="stats.html">Full Career Stats</a></li>
-  </ul>
-</li>
+            <!-- Photos Dropdown -->
+            <li class="dropdown">
+                <a href="#">Photos ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Photos Page 1</a></li>
+                    <li><a href="#">Photos Page 2</a></li> 
+                    <li><a href="#">Photos Page 3</a></li>            
+                    <li><a href="#">Photos Page 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
+    <!-- Hero Section (Goalkeeper Image Background) -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Drew Sossomon</h1>
+            <h3>GK 1 | Soccer Player | 13 Years Exp (8 as GK)</h3>
+            <div class="hero-btns">
+                <a href="stats.html" class="btn-primary">View Full Stats</a>
+                <a href="#assignments" class="btn-secondary">School Work</a>
+            </div>
+        </div>
+    </header>
 
-  <div id="nav-courses" class="nav-div">
-    <a href="#">Courses</a>
-    <ul>   
-      <li><a href="#">American History</a></li>
-      <li><a href="#">Geometry</a></li> 
-      <li><a href="#">Study Hall</a></li> 
-      <li><a href="#">Earth Science</a></li> 
-      <li><a href="#">Web-dev/Game theory</a></li>
-      <li><a href="#">American Literature</a></li>
-      <li><a href="#">Latin II</a></li>
-    </ul>
-  </div>
-</div>
+    <!-- Main Content Area -->
+    <main class="container">
+        
+        <!-- School Assignments Section -->
+        <section id="assignments" class="content-box">
+            <h2>Webpage Submissions</h2>
+            <p>Recent projects from my Web Development course:</p>
+            <div class="work-grid">
+                <div class="work-card">
+                    <p>Headings Practice</p>
+                    <a href="./wdsub/heading.html">View Page</a>
+                </div>
+                <div class="work-card">
+                    <p>Recipe Project</p>
+                    <a href="./wdsub/recipe.html">View Page</a>
+                </div>
+                <div class="work-card">
+                    <p>Anchors Demo</p>
+                    <a href="./wdsub/anchors.html">View Page</a>
+                </div>
+                <div class="work-card">
+                    <p>Poem Project</p>
+                    <a href="./wdsub/poem.html">View Page</a>
+                </div>
+                <div class="work-card">
+                    <p>Top 5 Goalkeepers</p>
+                    <a href="./wdsub/reviews.html">View Page</a>
+                </div>
+            </div>
+        </section>
 
-<!-- FIXED IMAGE TAG BELOW -->
-<img id="bg-img" src="https://img.freepik.com/premium-photo/vertical-shoot-goalkeeper-trying-stop-shoot_755989-76.jpg" alt="Goalkeeper Action">
-    
-<h2>Webpage Submission</h2>  
-<p>Drew GK 1 | Soccer player goalkeeper | 13 years of experience, 8 years as GK</p>
+        <hr>
 
-<ol>
-  <li>
-    <p>we created a webpage for our headings practice</p>
-    <a href="./wdsub/heading.html">headings</a>
-  </li>
-  <li>
-    <p>we created a webpage for our recipe</p>
-    <a href="./wdsub/recipe.html">recipe</a>
-  </li>
-  <li>
-    <p>we created a webpage for our anchors</p>
-    <a href="./wdsub/anchors.html">Anchors Demonstrations</a>
-  </li>
-  <li>
-    <p>This is where I created my poem</p>
-    <a href="./wdsub/poem.html">poem.html</a>
-  </li>
-  <li> 
-    <p>This is where my Top Five Goalkeepers in Mens Soccer</p>
-    <a href="./wdsub/reviews.html">reviews.html</a>
-  </li> 
-</ol>
+        <!-- Resources Section -->
+        <section class="content-box">
+            <h2>Helpful Resources</h2>
+            <ul class="resource-list">
+                <li><a href="https://codepen.io" target="_blank">CodePen</a> - Our workspace</li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a> - Web tutorials</li>
+                <li><a href="https://lipsum.com" target="_blank">Lipsum</a> - Text generator</li>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Docs</a></li>
+            </ul>
+        </section>
 
-<hr>
+        <!-- Contact Section -->
+        <footer class="contact-box">
+            <a href="mailto:nathaneal.stamp@youngsvilleacademy.org?cc=student.as@youngsvilleacademy.org&subject=Live Code Submission - Sossomon&body=Dear Mr. Stamp," class="btn-contact">
+                Submit Live Code to Mr. Stamp
+            </a>
+        </footer>
 
-<h2>Helpful Resources</h2>
-<p>Check out these great resources for front-end development learners</p>
-<ul>
-  <li><a href="https://codepen.io/pen/" target="_blank">codepen</a> - this is what we use for our work.</li>
-  <li><a href="https://www.w3schools.com/" target="_blank">w3 Schools</a> - table of contents for all things web development.</li>
-  <li><a href="https://lipsum.com/" target="_blank">lipsum.com</a> - placeholder text generator.</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/web/HTML" target="_blank">MDN Web Docs</a></li>
-</ul>
-
-<hr>
-
-<a href="mailto:nathaneal.stamp@youngsvilleacademy.org?cc=student.as@youngsvilleacademy.org&subject=Live Code Submission - Stamp&body=Dear Mr. Stamp thank you so much for being my teacher" target="_blank">Click here to submit a new live code session</a>
+    </main>
 
 </body>
 </html>
