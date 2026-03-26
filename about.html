@@ -4,6 +4,64 @@
     <meta charset="UTF-8">
     <title>About Me - Drew Sossomon</title>
     <link rel="stylesheet" href="style.css">
+        <style>
+    .about-section {
+        max-width: 900px;
+        margin: 48px auto;
+        padding: 36px 28px;
+        background: #f8fafc;
+        border-radius: 16px;
+        box-shadow: 0 6px 32px rgba(39,68,114,0.13);
+        font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+
+    .about-section h1 {
+        font-size: 2.5rem;
+        color: #204283;
+        margin-bottom: 28px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .about-item p {
+        font-size: 1.12rem;
+        color: #222;
+        line-height: 1.7;
+        margin-bottom: 22px;
+        margin-top: 0;
+        letter-spacing: 0.03rem;
+    }
+
+    @media (max-width: 700px) {
+        .about-section {
+            padding: 16px 4vw;
+        }
+        .about-section h1 {
+            font-size: 1.6rem;
+        }
+        .about-item p {
+            font-size: 0.96rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Menu</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Me</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="about-section">
 </head>
 <body>
     <!-- Navigation Bar -->
