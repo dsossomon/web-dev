@@ -1,22 +1,22 @@
+/* 1. RESET & VARIABLES */
 :root {
     --navy: #0a192f;
     --navy-light: #172a45;
     --blue: #007bff;
     --white: #ffffff;
-    --gray-bg: #f0f2f5;
-    --text: #333;
+    --bg: #eaeff2;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--gray-bg);
-    color: var(--text);
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background-color: var(--bg); 
+    color: #333; 
     line-height: 1.6;
 }
 
-/* --- PRO NAVIGATION --- */
+/* 2. NAVIGATION (Fixed for both pages) */
 #nav-menu {
     background: var(--navy);
     display: flex;
@@ -27,42 +27,31 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
-
-.logo { color: white; font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; }
-
-.nav-links { list-style: none; display: flex; height: 100%; }
-.nav-links li { position: relative; display: flex; align-items: center; }
-.nav-links a { 
-    color: rgba(255,255,255,0.8); 
-    text-decoration: none; 
-    padding: 0 15px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: 0.2s;
-}
+.logo { color: white; font-weight: bold; font-size: 1.2rem; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { padding: 0 15px; position: relative; }
+.nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
 .nav-links a:hover { color: var(--blue); }
 
-/* Dropdown Logic */
+/* Dropdown */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 70px;
-    left: 0;
     background: white;
-    min-width: 200px;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     border-radius: 0 0 8px 8px;
 }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-content li a { color: var(--navy); padding: 12px 20px; display: block; border-bottom: 1px solid #eee; }
-.dropdown-content li a:hover { background: #f8fafc; color: var(--blue); }
+.dropdown-content li a { color: var(--navy) !important; padding: 12px; border-bottom: 1px solid #eee; }
 
-/* --- HERO SECTION --- */
+/* 3. HERO SECTION (Only shows on Index) */
 .hero {
     background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), 
-                url('https://images.unsplash.com/photo-1510567198184-c7484603f615?auto=format&fit=crop&q=80&w=2070');
+                url('https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80&w=2000');
     background-size: cover;
     background-position: center;
     height: 50vh;
@@ -72,79 +61,36 @@ body {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 20px;
 }
+.hero h1 { font-size: 3.5rem; text-transform: uppercase; }
 
-.hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 10px; }
-.hero h3 { font-weight: 300; opacity: 0.9; margin-bottom: 25px; }
-
-/* --- CONTAINERS & CARDS --- */
-.container, .stats-container {
+/* 4. STATS PAGE SPECIFIC (Clean and Professional) */
+.stats-container {
     max-width: 1100px;
     margin: 40px auto;
-    padding: 0 20px;
-}
-
-.content-box, .stats-container {
     background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* --- STATS SPECIFIC --- */
 .vitals-navy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     background: var(--navy);
     padding: 25px;
-    border-radius: 10px;
-    margin: 20px 0;
+    border-radius: 12px;
 }
-.vitals-item { color: #a0aec0; font-size: 0.75rem; text-transform: uppercase; text-align: center; }
-.vitals-item span { display: block; color: white; font-size: 1rem; font-weight: 700; text-transform: none; margin-top: 4px; }
+.vitals-item { color: #8892b0; font-size: 0.7rem; text-transform: uppercase; text-align: center; }
+.vitals-item span { display: block; color: white; font-size: 1rem; font-weight: bold; margin-top: 5px; }
 
-.table-wrapper { overflow-x: auto; margin: 20px 0; border: 1px solid #edf2f7; border-radius: 8px; }
+.table-wrapper { overflow-x: auto; margin: 30px 0; border: 1px solid #edf2f7; border-radius: 10px; }
 table { width: 100%; border-collapse: collapse; min-width: 800px; }
-th { background: #f8fafc; color: var(--navy); padding: 15px; font-size: 0.8rem; border-bottom: 2px solid #edf2f7; text-align: center; }
-td { padding: 15px; border-bottom: 1px solid #edf2f7; text-align: center; font-size: 0.9rem; }
-.stat-label { text-align: left !important; font-weight: 700; background: #f8fafc; position: sticky; left: 0; }
+th { background: #f8fafc; color: var(--navy); padding: 18px; font-size: 0.85rem; border-bottom: 2px solid #edf2f7; }
+td { padding: 15px; border-bottom: 1px solid #edf2f7; text-align: center; }
 
-/* --- BUTTONS --- */
-.btn-primary, .btn-contact {
-    background: var(--blue);
-    color: white !important;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    transition: 0.3s;
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,123,255,0.3); }
-
-.btn-secondary {
-    border: 2px solid white;
-    color: white !important;
-    padding: 10px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-/* --- WORK GRID --- */
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 25px;
-}
-.work-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    border-bottom: 4px solid var(--blue);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    text-align: center;
-}
+/* 5. COMPONENTS */
+.btn-primary { background: var(--blue); color: white !important; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+.work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px 5%; }
+.work-card { background: white; padding: 25px; border-radius: 10px; border-bottom: 4px solid var(--blue); text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
